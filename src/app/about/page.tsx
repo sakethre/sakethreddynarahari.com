@@ -22,7 +22,7 @@ const About = () => {
 					, currently at <b>Microsoft</b> in the Azure Virtual Machines Org and I think about making impact via entrepreneurship.
 				</p>
 				<p>
-					At Amazon, I did (cool?)stuff like designing and implementing <b>Concurrent Surveys Tool</b>,
+					At Amazon, I did (cool?)stuff such as designing and implementing <b>Concurrent Surveys Tool</b>,
 					a high-impact application currently used across 800+ delivery stations
 					globally to collect feedback for Amazon Delivery Station workers regarding new product launches.
 					It was a great experience at Amazon that made me see and learn the real scale game and build efficiencies on top of it.
@@ -39,17 +39,17 @@ const About = () => {
 					experience, with interests spanning distributed systems, ML, and clean
 					UX.
 				</p>
-				<h4 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
+				<h2 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
 					When I&apos;m not at my desk...
-				</h4>
+				</h2>
 				<p>
 					Outside of work, I&apos;m into entrepreneurship,reading about business, environment and impacts on health, gadgets, WEB3, volunteering, MUN, debates,
 					and quiz. Always up for learning something new or shipping a
 					small tool that makes life easier.
 				</p>
-				<h4 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
+				<h2 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
 					What drives me
-				</h4>
+				</h2>
 				<p>
 					As an entrepreneur, and an environment enthusiast, I like building products that are
 					useful, sustainable, and scalable. I&apos;m motivated by solving real problems that help the mankind

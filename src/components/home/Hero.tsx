@@ -10,10 +10,10 @@ export default function Hero(): ReactElement {
 	const t = useTranslations('HomePage')
 	return (
 		<section>
-			<h1 className='sr-only'>
+			<p className='sr-only'>
 				Hi I&apos;m Saketh Reddy Narahari, I&apos;m a software engineer and I craft
 				things for the web.
-			</h1>
+			</p>
 			<div className='flex cursor-default flex-col justify-center'>
 				<div className='flex flex-col'>
 					<h1 className='text-3xl lg:text-4xl font-medium text-dark dark:text-light name-highlight'>

@@ -1,9 +1,15 @@
-'use client'
+
 
 import AnimatedText from '@/src/components/AnimatedText'
 import FadeDown from '@/src/components/animations/FadeDown'
 import FadeUp from '@/src/components/animations/FadeUp'
 import Link from 'next/link'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Contact',
+    description: 'Get in touch with Saketh Reddy Narahari for opportunities, collaborations, or just to say hi.',
+}
 
 const Contact = () => {
     return (
@@ -19,9 +25,9 @@ const Contact = () => {
             </FadeDown>
 
             <FadeUp duration={0.4}>
-                <h4 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
+                <h2 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
                     Email
-                </h4>
+                </h2>
                 <p>
                     The best way to reach me is via email at{' '}
                     <a href='mailto:narahari.saketh@gmail.com' className='link'>
@@ -29,9 +35,9 @@ const Contact = () => {
                     </a>
                 </p>
 
-                <h4 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
+                <h2 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
                     Connect on Social
-                </h4>
+                </h2>
                 <p>
                     You can also find me on{' '}
                     <a
@@ -54,9 +60,9 @@ const Contact = () => {
                     . Let's connect and collaborate!
                 </p>
 
-                <h4 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
+                <h2 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
                     What I'm interested in
-                </h4>
+                </h2>
                 <p>
                     I'm particularly interested in discussing:
                 </p>

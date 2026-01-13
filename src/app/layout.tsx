@@ -23,10 +23,12 @@ export const metadata: Metadata = {
 		default: 'Saketh Reddy Narahari',
 		template: '%s | Saketh Reddy Narahari',
 	},
-	description: 'Software Development Engineer',
+	description:
+		'Software Engineer and Entreprenuer based in Seattle. Specializing in full-stack development, distributed systems, and scalable web applications.',
 	openGraph: {
 		title: 'Saketh Reddy Narahari',
-		description: 'Software Development Engineer',
+		description:
+			'Software Engineer and Entreprenuer based in Seattle. Specializing in full-stack development, distributed systems, and scalable web applications.',
 		url: 'https://sakethreddynarahari.com',
 		siteName: 'Saketh Reddy Narahari',
 		locale: 'en-US',
@@ -61,9 +63,30 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode
 }) {
+	const jsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: 'Saketh Reddy Narahari',
+		url: 'https://sakethreddynarahari.com',
+		jobTitle: 'Software Engineer',
+		worksFor: {
+			'@type': 'Organization',
+			name: 'Microsoft',
+		},
+		sameAs: [
+			'https://linkedin.com/in/sakethreddynarahari',
+			'https://github.com/sakethre',
+			'https://twitter.com/sakethre',
+		],
+	}
+
 	return (
 		<html lang='en'>
 			<body className={clsx('antialiased bg-light dark:bg-dark', inter.variable)}>
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+				/>
 				<NextIntlClientProvider messages={en as any}>
 					<Provider>
 						<Navbar />
