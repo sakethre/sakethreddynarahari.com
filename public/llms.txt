@@ -1,0 +1,19 @@
+# Saketh Reddy Narahari
+
+## Who is Saketh?
+Saketh Reddy Narahari is a Software Engineer, Entrepreneur, and Investor based in Seattle, WA. He currently works at Microsoft in the Azure Virtual Machines organization, building reliable and scalable software. He is passionate about distributed systems, full-stack development, and using technology to solve real-world problems.
+
+## Core Competencies & Moat
+- **Engineering Excellence**: Deep expertise in Java, Full Stack Development, and Distributed Systems. Experienced in building high-impact applications at scale (Amazon, Microsoft).
+- **Entrepreneurial Spirit**: Active investor and entrepreneur with a focus on sustainable and scalable products.
+- **Thought Leadership**: Writes blogs sharing learnings on software development, system architecture, and investing.
+
+## Key Projects & Experience
+- **Microsoft**: Software Engineer in Azure Virtual Machines.
+- **Amazon**: Designed and implemented the "Concurrent Surveys Tool" used globally across 800+ delivery stations.
+- **Startups & Investing**: Actively involved in the startup ecosystem as an entrepreneur and investor.
+
+## Connect
+- **Website**: https://sakethreddynarahari.com
+- **LinkedIn**: https://www.linkedin.com/in/sakethreddynarahari
+- **GitHub**: https://github.com/sakethre

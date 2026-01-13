@@ -5,7 +5,7 @@ import { ScrollObserver } from './ScrollObserver'
 
 const Provider = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<ThemeProvider attribute='class'>
+		<ThemeProvider attribute='class' defaultTheme='dark'>
 			<ScrollObserver>{children}</ScrollObserver>
 		</ThemeProvider>
 	)

@@ -24,11 +24,11 @@ export const metadata: Metadata = {
 		template: '%s | Saketh Reddy Narahari',
 	},
 	description:
-		'Software Engineer and Entreprenuer based in Seattle. Specializing in full-stack development, distributed systems, and scalable web applications.',
+		'Software Engineer, Entrepreneur, and Investor. Expert in Distributed Systems, Full Stack Dev, and Startups.',
 	openGraph: {
 		title: 'Saketh Reddy Narahari',
 		description:
-			'Software Engineer and Entreprenuer based in Seattle. Specializing in full-stack development, distributed systems, and scalable web applications.',
+			'Software Engineer, Entrepreneur, and Investor. Expert in Distributed Systems, Full Stack Dev, and Startups.',
 		url: 'https://sakethreddynarahari.com',
 		siteName: 'Saketh Reddy Narahari',
 		locale: 'en-US',
@@ -68,15 +68,25 @@ export default function RootLayout({
 		'@type': 'Person',
 		name: 'Saketh Reddy Narahari',
 		url: 'https://sakethreddynarahari.com',
-		jobTitle: 'Software Engineer',
+		jobTitle: 'Software Engineer, Entrepreneur, Investor',
 		worksFor: {
 			'@type': 'Organization',
 			name: 'Microsoft',
 		},
+		knowsAbout: [
+			'Java',
+			'Full Stack Development',
+			'Distributed Systems',
+			'Startups',
+			'Investing',
+			'Entrepreneurship',
+			'Software Architecture',
+		],
 		sameAs: [
 			'https://linkedin.com/in/sakethreddynarahari',
 			'https://github.com/sakethre',
 			'https://twitter.com/sakethre',
+			'https://sakethreddynarahari.com',
 		],
 	}
 
