@@ -1,0 +1,57 @@
+---
+title: "Fixing the Netflix Household Verification Error"
+publishedAt: "2024-11-19"
+summary: "How I built a Chrome extension to bypass Netflix's household verification error and restore seamless streaming across devices."
+image: /images/netflix-household-fix/banner.png
+---
+
+### The Problem
+
+Netflix's new household verification system has been causing frustration for users trying to watch content on their own devices. The dreaded **"Your device isn't part of the Netflix Household for this account"** error has been ruining movie nights for many legitimate subscribers.
+
+### My Solution
+
+I created a Chrome extension called **NetflixSameHouseholdFix** that automatically handles the household verification process, allowing you to stream without constant interruptions.
+
+### How It Works
+
+The extension intercepts Netflix's household verification requests and automatically manages the verification flow. This ensures that your devices remain recognized as part of your household, even when switching between different networks.
+
+### Key Features
+
+- **Automatic Verification**: No manual intervention required
+- **Seamless Integration**: Works transparently in the background
+- **Privacy-Focused**: All processing happens locally in your browser
+- **Open Source**: Full transparency with code available on GitHub
+
+### Technical Implementation
+
+The extension uses Chrome's declarativeNetRequest API to intercept and modify specific Netflix API calls. This approach ensures:
+
+1. **Minimal Performance Impact**: Uses Chrome's native APIs for optimal performance
+2. **Security**: No external servers or data collection
+3. **Reliability**: Automatically updates verification tokens as needed
+
+### Installation
+
+You can install the extension by:
+
+1. Visiting the [GitHub repository](https://github.com/sakethre/NetflixSameHouseholdFix)
+2. Following the installation instructions in the README
+3. Loading it as an unpacked extension in Chrome
+
+### Results
+
+Since deploying this solution, I've been able to enjoy uninterrupted Netflix streaming across all my devices without constantly dealing with household verification prompts.
+
+### Open Source Contribution
+
+The entire project is open source and available on GitHub. I welcome contributions, bug reports, and feature requests from the community.
+
+[View the project on GitHub →](https://github.com/sakethre/NetflixSameHouseholdFix)
+
+### Conclusion
+
+While Netflix's household verification system aims to prevent account sharing, it can sometimes create friction for legitimate users. This extension provides a technical solution while respecting Netflix's service terms for individual household use.
+
+**Note**: This extension is intended for personal use within your own Netflix household. Please respect Netflix's terms of service and only use this for legitimate purposes.
