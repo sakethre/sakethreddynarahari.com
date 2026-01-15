@@ -10,11 +10,14 @@ export default async function handler(
 ) {
 	try {
 		const ipAddress = req.headers['x-forwarded-for'] || '0.0.0.0'
+		const sessionIdHeader = req.headers['x-reaction-session-id'] as string
 
 		const slug = req.query?.slug as string
-		const currentUserId = createHash('md5')
-			.update(ipAddress + process.env.IP_ADDRESS_SALT!, 'utf8')
-			.digest('hex')
+		const currentUserId = sessionIdHeader
+			? sessionIdHeader
+			: createHash('md5')
+				.update(ipAddress + process.env.IP_ADDRESS_SALT!, 'utf8')
+				.digest('hex')
 		// Identify a specific users interactions with a specific post
 		const sessionId = slug + '___' + currentUserId
 

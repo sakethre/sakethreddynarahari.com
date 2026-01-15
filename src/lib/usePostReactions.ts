@@ -12,8 +12,15 @@ type MetricsPayload = {
 	isLoved: Boolean
 }
 
-async function getPostReactions(slug: string): Promise<MetricsPayload> {
-	const res = await fetch(API_URL + `/${slug}`)
+async function getPostReactions(
+	slug: string,
+	sessionId: string
+): Promise<MetricsPayload> {
+	const res = await fetch(API_URL + `/${slug}`, {
+		headers: {
+			'x-reaction-session-id': sessionId,
+		},
+	})
 	if (!res.ok) {
 		throw new Error('An error occurred while fetching the data.')
 	}
@@ -22,11 +29,15 @@ async function getPostReactions(slug: string): Promise<MetricsPayload> {
 
 async function updatePostReactions(
 	slug: string,
-	reactionTypes: string[]
+	reactionTypes: string[],
+	sessionId: string
 ): Promise<MetricsPayload> {
 	const res = await fetch(API_URL + `/${slug}`, {
 		method: 'POST',
-		headers: { 'Content-Type': 'application/json' },
+		headers: {
+			'Content-Type': 'application/json',
+			'x-reaction-session-id': sessionId,
+		},
 		body: JSON.stringify(reactionTypes),
 	})
 
@@ -38,9 +49,20 @@ async function updatePostReactions(
 }
 
 export const usePostReactions = (slug: string, config?: SWRConfiguration) => {
+	const [sessionId, setSessionId] = React.useState<string>('')
+
+	React.useEffect(() => {
+		let id = localStorage.getItem('reaction-session-id')
+		if (!id) {
+			id = crypto.randomUUID()
+			localStorage.setItem('reaction-session-id', id)
+		}
+		setSessionId(id)
+	}, [])
+
 	const { data, error, mutate } = useSWR(
-		[API_URL, slug],
-		() => getPostReactions(slug),
+		sessionId ? [API_URL, slug, sessionId] : null,
+		([_, slug, sessionId]) => getPostReactions(slug, sessionId),
 		{
 			dedupingInterval: 60000,
 			...config,
@@ -88,7 +110,7 @@ export const usePostReactions = (slug: string, config?: SWRConfiguration) => {
 
 	useDebounce(
 		() => {
-			if (batchedReactions.length === 0) return
+			if (batchedReactions.length === 0 || !sessionId) return
 
 			const reactionsCopy = [...batchedReactions]
 			// Clear the batchedReactions array
@@ -96,10 +118,10 @@ export const usePostReactions = (slug: string, config?: SWRConfiguration) => {
 
 			// update the database and use the data updatePostReactions returns to update
 			// the local cache with database data
-			mutate(updatePostReactions(slug, reactionsCopy))
+			mutate(updatePostReactions(slug, reactionsCopy, sessionId))
 		},
 		1000,
-		[batchedReactions]
+		[batchedReactions, sessionId]
 	)
 
 	return {
