@@ -6,7 +6,7 @@ This is my personal <a href="https://sakethreddynarahari.com" target="_blank">we
 
 # Overview
 
-This is my personal website built using NextJs, Tailwind CSS, Supabase and Vercel. I'll try to use this website to share my goals, learnings and thoughts. 
+This is my personal website built using NextJs, Tailwind CSS, Supabase, and Vercel. I'll try to use this website to share my goals, learnings and thoughts. 
 
 Feel free to fork and customize it for your own use. If you find any issues in the website, feel free to open an issue and if you want, you can open a pull request for it too. I tried to learn Prisma and use it but for most personal websites scale we don't need it. 
 
